@@ -1,5 +1,6 @@
 import { Component } from 'angular2/core';
 
+import { ProductService } from './products/product.service';
 import { ProductListComponent } from './products/product-list.component';
 
 @Component({
@@ -10,7 +11,8 @@ import { ProductListComponent } from './products/product-list.component';
     <pm-products></pm-products>
   </div>
   `,
-  directives: [ProductListComponent]
+  directives: [ProductListComponent],
+  providers: [ProductService]
 })
 export class AppComponent {
   pageTitle: string = 'Acme Product Management';

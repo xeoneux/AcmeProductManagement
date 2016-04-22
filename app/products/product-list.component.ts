@@ -6,7 +6,6 @@ import { ProductService } from './product.service';
 import { StarComponent } from '../shared/star.component';
 
 @Component({
-  selector: 'pm-products',
   templateUrl: 'app/products/product-list.component.html',
   styleUrls: ['app/products/product-list.component.css'],
   pipes: [ProductFilterPipe],

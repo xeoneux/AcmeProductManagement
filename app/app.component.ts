@@ -5,6 +5,7 @@ import 'rxjs/Rx';
 
 import { ProductService } from './products/product.service';
 import { ProductListComponent } from './products/product-list.component';
+import { ProductDetailComponent } from './products/product-detail.component';
 
 @Component({
   selector: 'pm-app',
@@ -13,7 +14,8 @@ import { ProductListComponent } from './products/product-list.component';
   providers: [ProductService, HTTP_PROVIDERS, ROUTER_PROVIDERS]
 })
 @RouteConfig([
-  { path: '/products', name: 'Products', component: ProductListComponent, useAsDefault: true }
+  { path: '/products', name: 'Products', component: ProductListComponent, useAsDefault: true },
+  { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent }
 ])
 export class AppComponent {
   pageTitle: string = 'Acme Product Management';
